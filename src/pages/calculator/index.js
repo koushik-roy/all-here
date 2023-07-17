@@ -2,6 +2,7 @@ import React from "react";
 import DigitButton from "../../../src/components/calculator/DigitButton";
 import OperationButton from "../../../src/components/calculator/OperationButton";
 import { useReducer } from "react";
+import styles from "../../styles/calculator.module.css";
 export const ACTIONS = {
   ADD_DIGIT: "add-digit",
   CHOOSE_OPERATION: "choose",
@@ -139,18 +140,18 @@ function Calculator() {
   );
 
   return (
-    <>
-      <div className="calculator-grid">
-        <div className="output">
-          <div className="previous-operand">
+    <div className={styles.calculatorBody}>
+      <div className={styles.calculatorGrid}>
+        <div className={styles.output}>
+          <div className={styles.previousOperand}>
             {operandFormatter(previousOperand)} {operation}
           </div>
-          <div className="current-operand">
+          <div className={styles.currentOperand}>
             {operandFormatter(currentOperand)}
           </div>
         </div>
         <button
-          className="span-two"
+          className={styles.spanTwo}
           onClick={() => dispatch({ type: ACTIONS.CLEAR })}
         >
           AC
@@ -181,13 +182,13 @@ function Calculator() {
         <DigitButton digit="." dispatch={dispatch} />
         <DigitButton digit="0" dispatch={dispatch} />
         <button
-          className="span-two"
+          className={styles.spanTwo}
           onClick={() => dispatch({ type: ACTIONS.EVALUATE })}
         >
           =
         </button>
       </div>
-    </>
+    </div>
   );
 }
 

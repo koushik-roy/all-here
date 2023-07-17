@@ -1,15 +1,14 @@
-*,
+/* *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-body {
+} */
+.calculatorBody {
   margin: 0;
   background: linear-gradient(to right, #00aaff, #00ff6c);
 }
 
-.calculator-grid {
+.calculatorGrid {
   display: grid;
   margin-top: 2rem;
   justify-content: center;
@@ -17,7 +16,7 @@ body {
   grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
 }
 
-.calculator-grid > button {
+.calculatorGrid > button {
   cursor: pointer;
   font-size: 2rem;
   background-color: rgba(255, 255, 255, 0.75);
@@ -25,12 +24,12 @@ body {
   outline: none;
 }
 
-.calculator-grid > button:hover,
-.calculator-grid > button:focus {
+.calculatorGrid > button:hover,
+.calculatorGrid > button:focus {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-.span-two {
+.spanTwo {
   grid-column: span 2;
 }
 
@@ -46,12 +45,12 @@ body {
   word-break: break-all;
 }
 
-.output .previous-operand {
+.previousOperand {
   color: rgba(255, 255, 255, 0.75);
   font-size: 1.5rem;
 }
 
-.output .current-operand {
+.currentOperand {
   color: white;
   font-size: 2.5rem;
 }
