@@ -11,6 +11,10 @@ export default function Home() {
       <Link href={"/calculator"} passHref>
         <button>Calculator</button>
       </Link>
+      <br />
+      <Link href={"/todo-list"} passHref>
+        <button>Todo List</button>
+      </Link>
     </>
   );
 }
